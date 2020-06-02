@@ -10,7 +10,6 @@ Page,.container{
   flex-direction: row;
   /* 里面元素的排列方式   横向排列*/
   /* 主轴和交叉轴与  fiex-direction  有关，同方向的是主轴，另一个是交叉轴 */
-
   flex-wrap: wrap;
   /* 换行 */
   flex-wrap:nowrap;
@@ -101,5 +100,6 @@ Page,.container{
   /* 交叉轴，元素没有设置高度或是auto，占满容器高度 */
   align-self: baseline;
   /* 各元素第一行文字的基线对齐 */
+
 
 }
