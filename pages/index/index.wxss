@@ -1,21 +1,105 @@
-/**index.wxss**/
-.userinfo {
+Page,.container{
+  height: 100%;
+  width: 100%;
+  background-color: blueviolet;
   display: flex;
+  /* 开启flex布局 */
+
   flex-direction: column;
+  /* 里面元素的排列方式   纵向排列*/
+  flex-direction: row;
+  /* 里面元素的排列方式   横向排列*/
+  /* 主轴和交叉轴与  fiex-direction  有关，同方向的是主轴，另一个是交叉轴 */
+
+  flex-wrap: wrap;
+  /* 换行 */
+  flex-wrap:nowrap;
+  /* 不换行 */
+  flex-wrap: wrap-reverse;
+  /* 换行，并且被换行的显示在前面 */
+  /* 空间不够一行排列，是否换行，和换行的效果 */
+
+  flex-flow: row wrap;
+  /* flex-direction  和  flex-wrap 的简写方式 */
+
+  justify-content: center;
+  /* 主轴居中 */
+  justify-content:flex-start;
+  /* 主轴局前对齐 */
+  justify-content: flex-end;
+  /* 主轴局后对齐 */
+  justify-content: space-around;
+  /* 主轴上元素的外部距离一样 */
+
+  justify-content: space-between;
+  /* 主轴上元素的间隔一样 */
+  /* 主轴上的对齐方式 */
+
+
+
   align-items: center;
-}
+  /* 交叉轴居中 */
+  align-items: flex-start;
+  /* 交叉轴居前对齐 */
+  align-items: flex-end;
+  /* 交叉轴居后对齐 */
+  /* 元素在交叉轴上的对齐方式 */
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-}
+  align-items: stretch;
+  /* 元素没有设置高度或者auto时，占满容器高度 */
 
-.userinfo-nickname {
-  color: #aaa;
-}
+  align-items: baseline;
+  /* 各个元素的第一行文字的基线对齐 */
+  
 
-.usermotto {
-  margin-top: 200px;
+
+}
+.item{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: turquoise;
+  border: 1px solid white;
+
+  flex-grow: 1;
+  /* 容器显示完元素有剩余空间，各元素对剩余空间的占有规则   各元素剩余空间均分几份占多少份*/
+
+  flex-shrink: 1;
+  /* 容器一行显示不下全部元素，各元素分别缩小的倍数     */
+
+  order: 3;
+
+  
+
+
+  /* 自身元素的交叉轴排列方式 */
+
+}
+.-item-{
+  width: 200rpx;
+  height: 200rpx;
+  background-color: turquoise;
+  border: 1px solid white;
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 10;
+  flex-basis: 200rpx;
+  /* 元素在主轴方向占据的空间 */
+
+  flex:1 1 50px;
+  /* flex-flow   flex-shrink  flex-basis  这三个的简写 */
+
+  order:1;
+  /* 元素在主轴的排列顺序     Order 的升序排列    也可以在元素上直接设置order   写法  style="order:23" */
+
+  align-self: center;
+  /* 交叉轴居中 */
+  align-self: flex-start;
+  /* 交叉轴居前对齐 */
+  align-self: flex-end;
+  /* 交叉轴居后对齐 */
+  align-self: stretch;
+  /* 交叉轴，元素没有设置高度或是auto，占满容器高度 */
+  align-self: baseline;
+  /* 各元素第一行文字的基线对齐 */
+
 }
